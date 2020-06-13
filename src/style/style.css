@@ -1,0 +1,234 @@
+@font-face {
+    font-family: "MADE";
+    src: url("../fonts/MADE.otf");
+}
+
+@font-face {
+    font-family: "ProximaNova-Regular";
+    src: url("../fonts/ProximaNova-Regular.ttf");
+}
+
+@font-face {
+    font-family: "ProximaNova-Bold";
+    src: url("../fonts/ProximaNova-Bold.ttf");
+}
+
+@font-face {
+    font-family: "ProximaNova-Semibold";
+    src: url("../fonts/ProximaNova-Semibold.ttf");
+}
+
+body {
+    font-family: 'ProximaNova-Regular';
+}
+
+.product-prices {
+    background-color: white;
+    padding: 190px 135px 0 135px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    display: flex;
+    margin-bottom: 70px;
+    align-items: center;
+}
+
+.heading h2 {
+    font-family: 'MADE';
+    font-size: 64px;
+    color: #2E0028;
+    margin: 0 33px;
+}
+
+.heading-line {
+    display: inline-block;
+    height: 1.5px;
+    width: 150px;
+    background-color: #A28CD1;
+}
+
+.product-var-list {
+    display: flex;
+    justify-content: center;
+}
+
+.product-var-list {
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 3px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.product-var {
+    cursor: pointer;
+    color: #958B94;
+    margin: 0 25px;
+    font-size: 24px;
+}
+
+.product-var.active {
+    font-weight: 600;
+    color: #51424F;
+}
+
+.slick {
+    height: 6px;
+    background-color: #E2D6EA;
+    width: 50px;
+    position: absolute;
+    transform: translate(-50%, -100%);
+    left: 75px;
+    bottom: -10px;
+    transition: 0.4s;
+}
+
+.slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    position: relative;
+    width: 100%;
+    /* height: 100%; */
+    transition: 0.4s;
+}
+
+.slides {
+    flex: 1 0 100%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;    
+}
+
+.btn {
+    padding: 16px 32px;
+    box-sizing: border-box;
+    height: 54px;
+    background: #B2A4D4;
+    border: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    transition: 0.4s;
+    font-family: 'ProximaNova-Regular';
+    margin-bottom: 30px;
+}
+
+.btn:hover {
+    background: #F4EDF7;
+    color: #996E92;
+}
+
+.order-cake {
+    margin-bottom: 160px;
+}
+
+.pricelist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricelist-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.priceitem {
+    border: 3px solid #E3CAE3;
+    padding: 30px 75px 30px 100px;
+    box-sizing: border-box;
+    /* max-height: 200px; */
+    /* max-width: 670px; */
+    flex: 0 0 49%;
+    margin-bottom: 30px;
+    box-shadow: 0px 2px 20px rgba(178, 150, 173, 0.25);
+}
+
+.heading-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.price-value {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    color: #B296AD;
+    margin-right: 55px;
+}
+
+.price-description {
+    font-size: 16px;
+    line-height: 24px;
+    color: #6F5E6C;
+}
+
+.size {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #2E0028;
+}
+
+.pricelist-footer {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.pricelist-markup {
+    margin-right: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.markup {
+    display: flex;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6F5E6C;
+}
+
+.markup p {
+    max-width: 521.5px;
+}
+
+.markup.strong {
+    font-weight: 600;
+}
+
+.list-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #A28CD1;
+    margin-right: 15px;
+    margin-top: 8px;
+}
+
+.three {
+    background-color: green;
+}
+
+.four {
+    background-color: blue;
+}

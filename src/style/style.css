@@ -460,8 +460,10 @@ body {
 }
 
 @media screen and (max-width: 578px) {
-    
-
+    .heading h2 {
+        font-size: 34px;
+        margin: 0;
+    }
     .gallery-slide-description {
         font-size: 18px;
     }

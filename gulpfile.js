@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');							//sass
 const browserSync = require('browser-sync').create();		//runtime watcher and changer
 const clean = require('gulp-clean');						//cleaner product directory "dev"
 const cleanCSS = require('gulp-clean-css');					//CSS minifier
@@ -34,11 +33,6 @@ function img() {											//модуль переноса картинок
     return gulp.src(imgFiles)
         .pipe(imagemin())
         .pipe(gulp.dest('./dist/img'))
-}
-
-function php() {											//модуль переноса php-файлов
-    return gulp.src('./src/php/*.php')
-        .pipe(gulp.dest('./dist'))
 }
 
 function buildhtml () {										//Copy index.html to dir "dev"
@@ -100,8 +94,7 @@ function watch() {
 		}
 	});
 
-	gulp.watch('./src/**/*.scss', forSass);
-    gulp.watch('./src/**/*.php', php);	// ставим watcher для слежения за изменениями в файлах
+	gulp.watch('./src/**/*.css', forSass);
 	gulp.watch('./src/**/*.js', scripts);
 	gulp.watch('./src/**/*.html', buildhtml);
 }
@@ -109,12 +102,11 @@ function watch() {
 
 gulp.task('cleandev', cleandev);
 gulp.task('img', img);
-gulp.task('php', php);
 gulp.task('buildHtml', buildhtml);
 gulp.task('scripts', scripts);
 gulp.task('sass', forSass);
 gulp.task('watch', watch);
 gulp.task('fonts', fonts);
 gulp.task('jq', jq);
-gulp.task('build', gulp.series('cleandev', gulp.series(img, php, buildhtml, fonts, jq, scripts, forSass)));
+gulp.task('build', gulp.series('cleandev', gulp.series(img, buildhtml, fonts, jq, scripts, forSass)));
 gulp.task('dev', gulp.series('build', watch));

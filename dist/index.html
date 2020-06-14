@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="./img/icon.png" />
     <title>Try Me Bakery</title>
     <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -15,7 +17,7 @@
         <div class="heading price-heading"><span class="heading-line"></span>
             <h2>Что вы можете заказать</h2><span class="heading-line"></span>
         </div>
-        <ul class="product-var-list">
+        <ul class="product-var-list main-padding">
             <li class="product-var active" data-category="cakes">Торты</li>
             <li class="product-var" data-category="cupcakes">Капкейки</li>
             <li class="product-var" data-category="zephyr">Зефир</li>
@@ -24,9 +26,126 @@
         </ul>
         <div class="slider-wrapper">
             <div class="slider" id="price-slider">
-                <div class="slides price-var cake" data-category="cakes">
-                    <div class="gallery">
+                <div class="slides price-var cake main-padding" data-category="cakes">
+                    <div class="swiper-button-prev slider-button "></div>
+                    <div class="swiper-button-next slider-button "></div>
+                    <div class="gallery swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card-container">
+                                    <img src="./img/cakes/fillings/1.jpg" alt="Jane Air">
+                                    <div class="hover">
+                                        <p class="description">
+                                            Скрывающаяся нежность, легкость и сладость этого тортика ассоциируется
+                                            романами о юности и любви. <br /><br />Супер воздушные ванильные коржи, пропитанные
+                                            клубничным сиропом, начинка из нежного клубничного мусса.
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="gallery-slide-description">Джейн Эйр</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-container">
+                                    <img src="./img/cakes/fillings/2.jpg" alt="Jane Air">
+                                    <div class="hover">
+                                        <p class="description">
+                                            Название торта говорит само за себя. Пряная вишня и крем-чиз с крошкой из
+                                            темного шоколада в сочетании с насышенными шоколадными коржами, пропитанными
+                                            вишневым сиропом – классический торт, названный в честь классического
+                                            произведения.
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="gallery-slide-description">Вишневый сад</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-container">
+                                    <img src="./img/cakes/fillings/3.jpg" alt="Jane Air">
+                                    <div class="hover">
+                                        <p class="description">
+                                            Невесомый и молочный многослойный торт на основе сгущённого молока - мягкие
+                                            коржи, прослоенные воздушным кремом Шантильи из взбитых сливок и несколько
+                                            слоев малинового конфи, придающих кисловатую нотку.
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="gallery-slide-description">Дюймовочка</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-container">
+                                    <img src="./img/cakes/fillings/4.jpg" alt="Jane Air">
+                                    <div class="hover">
+                                        <p class="description">
+                                            Хорошо бродить по свету с карамелькой за щекой!
+                                            Много карамели разных текстур, небольшая фруктовая нотка и идеальный, не
+                                            приторно-сладкий торт готов. Бисквиты с добавлением домашней карамели,
+                                            начинка из карамелизированных яблок/бананов на ваш выбор, дополненная
+                                            взбитой карамелью.
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="gallery-slide-description">Фунтик</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-container">
+                                    <img src="./img/cakes/fillings/5.jpg" alt="Jane Air">
+                                    <div class="hover">
+                                        <p class="description">
+                                            Почувствуй себя на необитаемом острове, попробовав кусочек этого необычного,
+                                            сочного и фруктового торта! Сочетание хрустящего ананаса, мягкого банана и
+                                            кисленького апельсина перенесет вас под пальму на солнечном пляже с легким
+                                            морским бризом.
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="gallery-slide-description">Робинзон Крузо</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-container">
+                                    <img src="./img/cakes/fillings/6.jpg" alt="Jane Air">
+                                    <div class="hover">
+                                        <p class="description">
+                                            В этом торте есть что-то сказочное, даже волшебное. Сочетание фиолетового
+                                            цвета разных оттенков или необычность вкуса, созданного лавандой… А может
+                                            черника, собранная в лесах Карелии? Тортик для тех, кто готов упасть в нору
+                                            за зайцем в поисках новых и необычных впечатлений!
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="gallery-slide-description">Алиса в стране чудес</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-container">
+                                    <img src="./img/cakes/fillings/7.jpg" alt="Jane Air">
+                                    <div class="hover">
+                                        <p class="description">
+                                            Шоколад, карамель, орешки… Есть ли что-либо, также хорошо дополняющее друг
+                                            друга? Плотные шоколадные коржи, тягучая карамель в сочетании с соленым
+                                            арахисом, воздушный мусс на молочном шоколаде.
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="gallery-slide-description">Щелкунчик</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-container">
+                                    <img src="./img/cakes/fillings/8.jpg" alt="Jane Air">
+                                    <div class="hover">
+                                        <p class="description">
+                                            Этот торт - теплый и легкий, но при этом насыщенный и впечатляющий, как и
+                                            история Рея Брэдбери. Нежные пряные коржи, воздушный мусс со специями и
+                                            компоте из вишни со сладким белым вином.
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="gallery-slide-description">Вино из одуванчиков</p>
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-scrollbar scrollbar"></div>
                     </div>
+
                     <button class="btn order order-cake">Заказать тортик</button>
                     <div class="pricelist">
                         <div class="heading pricelist-heading"><span class="heading-line"></span>
@@ -41,7 +160,8 @@
                                     </div>
                                     <p class="price-value">1900 &#8381</p>
                                 </div>
-                                <p class="price-description">Идеальный тортик для домашнего чаепития, а также для невест, которые хотят попробовать несколько вкусов, чтобы выбрать лучший.</p>
+                                <p class="price-description">Идеальный тортик для домашнего чаепития, а также для
+                                    невест, которые хотят попробовать несколько вкусов, чтобы выбрать лучший.</p>
                             </div>
                             <div class="priceitem">
                                 <div class="heading-description">
@@ -51,7 +171,8 @@
                                     </div>
                                     <p class="price-value">3400 &#8381</p>
                                 </div>
-                                <p class="price-description">Самый популярный размер тортика, средний по цене. Отличный вариант для праздника с самыми близкими.</p>
+                                <p class="price-description">Самый популярный размер тортика, средний по цене. Отличный
+                                    вариант для праздника с самыми близкими.</p>
                             </div>
                             <div class="priceitem">
                                 <div class="heading-description">
@@ -61,7 +182,8 @@
                                     </div>
                                     <p class="price-value">5800 &#8381</p>
                                 </div>
-                                <p class="price-description">Тортик для большой компании, подойдет как для Дня рождения с друзьями и семьей, так и для скромной свадьбы. </p>
+                                <p class="price-description">Тортик для большой компании, подойдет как для Дня рождения
+                                    с друзьями и семьей, так и для скромной свадьбы. </p>
                             </div>
                             <div class="priceitem">
                                 <div class="heading-description">
@@ -71,19 +193,24 @@
                                     </div>
                                     <p class="price-value">8300 &#8381</p>
                                 </div>
-                                <p class="price-description">Лучший выбор для масштабного праздника! Также возможен в качестве нижнего яруса многоярусного торта.</p>
+                                <p class="price-description">Лучший выбор для масштабного праздника! Также возможен в
+                                    качестве нижнего яруса многоярусного торта.</p>
                             </div>
                         </div>
                         <div class="pricelist-footer">
                             <ul class="pricelist-markup">
-                                <li class="markup"><span class="list-dot"></span><p>Если вам нужен тортик другого размера или формы – напишите  мне и я с радостью рассчитаю стоимость вашего индивидуального заказа!</p></li>
-                                <li class="markup strong"><span class="list-dot"></span>Обратите внимание - в стоимость тортиков оформление не входит!</li>
+                                <li class="markup"><span class="list-dot"></span>
+                                    <p>Если вам нужен тортик другого размера или формы – напишите мне и я с радостью
+                                        рассчитаю стоимость вашего индивидуального заказа!</p>
+                                </li>
+                                <li class="markup strong"><span class="list-dot"></span>Обратите внимание - в стоимость
+                                    тортиков оформление не входит!</li>
                             </ul>
                             <button class="btn order">Заказать тортик</button>
                         </div>
                     </div>
                 </div>
-                <div class="slides price-var cupcakes" data-category="cupcakes">
+                <div class="slides price-var cupcakes main-padding" data-category="cupcakes">
                     <button class="btn order order-cupcakes">Заказать капкейки</button>
                     <div class="pricelist">
                         <div class="heading pricelist-heading"><span class="heading-line"></span>
@@ -98,7 +225,8 @@
                                     </div>
                                     <p class="price-value">1900 &#8381</p>
                                 </div>
-                                <p class="price-description">Идеальный тортик для домашнего чаепития, а также для невест, которые хотят попробовать несколько вкусов, чтобы выбрать лучший.</p>
+                                <p class="price-description">Идеальный тортик для домашнего чаепития, а также для
+                                    невест, которые хотят попробовать несколько вкусов, чтобы выбрать лучший.</p>
                             </div>
                             <div class="priceitem">
                                 <div class="heading-description">
@@ -108,25 +236,31 @@
                                     </div>
                                     <p class="price-value">3400 &#8381</p>
                                 </div>
-                                <p class="price-description">Самый популярный размер тортика, средний по цене. Отличный вариант для праздника с самыми близкими.</p>
+                                <p class="price-description">Самый популярный размер тортика, средний по цене. Отличный
+                                    вариант для праздника с самыми близкими.</p>
                             </div>
                         </div>
                         <div class="pricelist-footer">
                             <ul class="pricelist-markup">
-                                <li class="markup"><span class="list-dot"></span><p>Если вам нужен тортик другого размера или формы – напишите  мне и я с радостью рассчитаю стоимость вашего индивидуального заказа!</p></li>
-                                <li class="markup strong"><span class="list-dot"></span>Обратите внимание - в стоимость тортиков оформление не входит!</li>
+                                <li class="markup"><span class="list-dot"></span>
+                                    <p>Если вам нужен тортик другого размера или формы – напишите мне и я с радостью
+                                        рассчитаю стоимость вашего индивидуального заказа!</p>
+                                </li>
+                                <li class="markup strong"><span class="list-dot"></span>Обратите внимание - в стоимость
+                                    тортиков оформление не входит!</li>
                             </ul>
                             <button class="btn order">Заказать тортик</button>
                         </div>
                     </div>
                 </div>
-                <div class="slides price-var three" data-category="zephyr"></div>
-                <div class="slides price-var four" data-category="lollypops"></div>
+                <div class="slides price-var three main-padding" data-category="zephyr"></div>
+                <div class="slides price-var four main-padding" data-category="lollypops"></div>
             </div>
 
         </div>
 
     </div>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="js/all.min.js"></script>
 </body>
 

@@ -24,7 +24,7 @@ body {
 
 .product-prices {
     background-color: white;
-    padding: 190px 0;
+    padding: 0 0 190px 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -112,7 +112,7 @@ body {
 }
 
 .main-padding {
-    padding: 0 9.3vw;
+    padding: 0 9vw;
 }
 
 .btn {
@@ -144,6 +144,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
 }
 
 .pricelist-wrapper {
@@ -159,6 +160,7 @@ body {
     flex: 0 0 49%;
     margin-bottom: 30px;
     box-shadow: 0px 2px 20px rgba(178, 150, 173, 0.25);
+    background-color: white;
 }
 
 .heading-description {
@@ -259,7 +261,7 @@ body {
     text-align: left;
 }
 
-.card-container:hover .hover{
+.card-container:hover .hover {
     opacity: 1;
 }
 
@@ -277,7 +279,7 @@ body {
     width: 100%;
 }
 
-.card-container img {
+.card-container .img {
     width: 18.75vw;
     height: 18.75vw;
 }
@@ -342,28 +344,200 @@ body {
     right: auto;
 }
 
+.more-info {
+    display: none;
+}
 
+.quick-buy {
+    display: none;
+}
 
+.cross {
+    display: none;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 20px;
+    right: 20px;
+}
 
+.background-plant-price {
+    position: absolute;
+    z-index: -1;
+}
 
+.background-plant-price.upper {
+    transform-origin: 0 100%;
+    transform: rotate(4deg) translate(0, 85%);
+    left: 0;
+    top: 0;
+    animation-name: upperwaving;
+    animation-duration: 2s;
+    animation-play-state: paused;
+}
 
+.background-plant-price.down {
+    transform: scaleX(-1) scaleY(-1) translate(0, -10%) rotateZ(4deg);
+    right: 0;
+    bottom: 0;
+    animation-name: downwaving;
+    animation-duration: 2s;
+    animation-play-state: paused;
+}
 
+.process {
+    padding: 190px 0;
+    text-align: center;
+    color: #958B94;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-plant-step {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+}
+
+.background-plant-step.right {
+    left: 100%;
+    transform: scaleX(-1) rotateZ(4deg);
+    animation-name: rightwaving;
+    animation-duration: 2s;
+    transform-origin: top left;
+    animation-play-state: paused;
+}
+
+.background-plant-step.left {
+    animation-name: leftwaving;
+    animation-play-state: paused;
+    animation-duration: 2s;
+    transform: rotateZ(4deg);
+    transform-origin: 0 0;
+}
+
+.process h3 {
+    font-size: 24px;
+    line-height: 150%;
+    width: 40vw;
+    margin: 0 auto 90px auto;
+}
+
+.process > p {
+    font-size: 16px;
+    line-height: 150%;
+    width: 39vw;
+    margin: 70px auto 0 auto;
+}
+
+.process .steps {
+    display: flex;
+    font-size: 16px;
+    line-height: 150%;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0 8.3vw;
+    align-items: baseline;
+}
+
+.process .steps .step {
+    flex:  0 0 25%;
+    position: relative;
+    padding-right: 30px;
+    box-sizing: border-box;
+
+}
+
+.process .steps .step:not(.last)::after {
+    position: absolute;
+    display: block;
+    width: 7vw;
+    height: 2px;
+    background-color: #E5E5E5;
+    content: '';
+    right: calc(-3.5vw + 30px);
+    top: 50px;
+
+}
+
+.process .steps .step .odd  {
+    margin-top: 14px;
+}
+
+.process .steps .step .step-description {
+    display: flex;
+    margin-top: 50px;
+    text-align: left;
+    
+}
+
+.process .steps .step .step-description p {
+    max-width: 17vw;
+}
+
+@keyframes upperwaving {
+    0% {
+        transform: rotate(25deg) translate(0, 85%);
+    }
+    50% {
+        transform: rotate(0deg) translate(0, 85%);
+    }
+    100% {
+        transform: rotate(4deg) translate(0, 85%);
+    }
+}
+
+@keyframes downwaving {
+    0% {
+        transform: scaleX(-1) scaleY(-1) translate(0, -10%) rotateZ(25deg);
+    }
+    50% {
+        transform: scaleX(-1) scaleY(-1) translate(0, -10%) rotateZ(0deg);
+    }
+    100% {
+        transform: scaleX(-1) scaleY(-1) translate(0, -10%) rotateZ(4deg);
+    }
+}
+
+@keyframes leftwaving {
+    0% {
+        transform: rotateZ(30deg);
+    }
+    50% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(4deg);
+    }
+}
+
+@keyframes rightwaving {
+    0% {
+        transform: scaleX(-1) rotateZ(30deg);
+    }
+    50% {
+        transform: scaleX(-1) rotateZ(0deg);
+    }
+    100% {
+        transform: scaleX(-1) rotateZ(4deg);
+    }
+}
 
 @media screen and (max-width: 1200px) {
     .pricelist-markup {
         margin-right: 0;
     }
-
     .pricelist-footer {
         justify-content: space-between;
     }
-
     .price-value {
         margin-right: 0;
     }
-
     .priceitem {
         padding: 30px;
+    }
+    .slider-button {
+        top: 58px;
     }
 }
 
@@ -371,15 +545,12 @@ body {
     .size-value {
         font-size: 18px;
     }
-
     .price-value {
         font-size: 18px;
     }
-
     .main-padding {
         padding: 0 7vw;
     }
-
     .slider-button {
         width: 50px;
         top: 60px;
@@ -387,19 +558,35 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-
+    .more-info {
+        display: block;
+        width: 100%;
+        background-color: #E3CAE3;
+    }
+    .quick-buy {
+        width: 100%;
+        display: none;
+    }
+    .cross {
+        display: block;
+    }
+    .btn:hover {
+        background: #B2A4D4;
+        color: #FFFFFF;
+    }
+    .card-container:hover .hover {
+        opacity: 0;
+    }
     .heading h2 {
         font-size: 34px;
         margin: 0;
     }
-
     .product-var-list {
-        border:  none;
+        border: none;
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 5px;
     }
-
     .product-var {
         flex: 0 0 140px;
         border-bottom: 1px solid #e5e5e5;
@@ -409,54 +596,118 @@ body {
         box-sizing: border-box;
         font-size: 20px;
     }
-
     .product-var.active {
         font-weight: 600;
         border-color: #e2d6ea;
         border-width: 6px;
         margin-bottom: 39px;
     }
-
+    .swiper-wrapper {
+        align-items: center;
+    }
     .slick {
         display: none;
     }
     .card-container {
-        width: 58vw;
-        height: 58vw;
+        width: 82.6vw;
+        height: calc(82.6vw + 44px);
     }
-
-    .card-container img {
-        width: 58vw;
-        height: 58vw;
+    .card-container .img {
+        width: 82.6vw;
+        height: 82.6vw;
     }
-
+    .card-container .hover {
+        width: 82.6vw;
+        height: 82.6vw;
+    }
     .swiper-slide {
-        width: 58vw;
+        width: 82.6vw;
+        height: auto !important;
     }
-
     .slider-button {
         display: none;
     }
-
     .heading h2 {
         font-size: 40px;
     }
-
     .pricelist-footer {
         flex-direction: column;
     }
-
     .pricelist-footer .btn {
         margin-top: 30px;
     }
-
     .priceitem {
         flex: 0 0 100%;
     }
-
     .pricelist-markup {
         align-self: flex-start;
     }
+    .background-plant-price {
+        width: 250px;
+        height: 355px;
+    }
+    .background-plant-price.down {
+        transform: scaleX(-1) scaleY(-1) translate(0, -10%) rotateZ(0deg);
+        animation-name: none;
+    }
+    .background-plant-price.upper {
+        transform: rotate(0deg) translate(0, 1130%);
+        animation-name: none;
+    }
+
+    .process h3 {
+        width: auto;
+        padding: 0 47px;
+        font-size: 20px;
+        margin: 0 0 20px 0;
+    }
+
+    .process .steps {
+        flex-direction: column;
+    }
+
+    .process .steps .step {
+        flex: 0 0 100%;
+        width: 100%;
+        padding: 60px 0;
+    }
+
+    .process .steps .step .step-description {
+        max-width: 95%;
+        font-size: 14px;
+    }
+
+    .process .steps .step .step-description p {
+        max-width: 92%;
+    }
+
+    .process .steps .step:not(.last)::after {
+        width: 80vw;
+        content: '';
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        top: 100%;
+    
+    }
+
+    .background-plant-step.right {
+        display: none;
+    }
+
+    .background-plant-step.left {
+        width: 90px;
+        height: 200px;
+        transform: rotateZ(-80deg);
+        left: -55px;
+    }
+
+    .process .info-step {
+        width: 80vw;
+        
+    }
+
+
 }
 
 @media screen and (max-width: 578px) {
@@ -467,41 +718,29 @@ body {
     .gallery-slide-description {
         font-size: 18px;
     }
-
     .btn {
         font-size: 16px;
     }
-
     .price-description {
         font-size: 14px;
     }
-
     .heading-description {
         position: relative;
     }
-
     .price-value {
         position: absolute;
         right: 0;
         top: 0;
     }
-
 }
 
 @media screen and (max-width: 480px) {
-
     .heading {
         width: 100vw;
         display: flex;
         justify-content: space-between;
     }
-
     .pricelist {
         width: 100%;
     }
-
 }
-
-
-
-

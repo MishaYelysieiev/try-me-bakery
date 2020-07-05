@@ -185,6 +185,10 @@ body {
     margin-right: 55px;
 }
 
+.price-value span {
+    font-family: "Roboto", sans-serif;
+}
+
 .price-description {
     font-size: 16px;
     line-height: 24px;
@@ -287,6 +291,16 @@ body {
     width: 100%;
 }
 
+.review-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.insta-container {
+    width: 100%;
+    overflow: hidden;
+}
+
 .card-container .img {
     width: 18.75vw;
     height: 18.75vw;
@@ -328,11 +342,25 @@ body {
     top: -200%;
 }
 
+.scrollbar-insta-elem {
+    background: #D7D7F1;
+    height: 4px;
+    position: relative;
+    top: -200%;
+}
+
 .scrollbar {
     margin: 30px auto;
 }
 
 .swiper-container-horizontal>.swiper-scrollbar {
+    background: #E5E5E5;
+    width: 170px;
+    height: 0.5px;
+    position: initial;
+}
+
+.insta-scrollbar {
     background: #E5E5E5;
     width: 170px;
     height: 0.5px;
@@ -525,6 +553,132 @@ body {
     display: flex;
 }
 
+.swiper-slide.review-slide > img {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide.insta-slide > img {
+    width: 100%;
+    height: 100%;
+}
+
+.reviews {
+    margin-top: 190px;
+}
+
+.insta {
+    margin-top: 190px;
+}
+
+.discount {
+    padding: 40px 80px;
+    border: 3px solid #E3CAE3;
+box-sizing: border-box;
+box-shadow: 0px 2px 20px rgba(178, 150, 173, 0.25);
+margin-top: 70px;
+width: 36vw;
+text-align: center;
+line-height: 150%;
+}
+
+.discount h3 {
+    font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #B29BC7;
+margin-bottom: 30px;
+}
+
+.insta-btn {
+    margin-top: 30px;
+    
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+    outline-style: none;
+}
+
+.btn a:visited {
+    color: inherit;
+
+}
+
+.header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.logo {
+    width: 85px;
+    height: 85px;
+    background-image: url('../img/Logo.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contacts {
+    display: flex;
+    font-size: 16px;
+    line-height: 150%;
+    font-family: "Roboto", sans-serif;
+    color: #B29BC7;
+}
+
+.contact-item a {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    color: #B29BC7;
+    outline-style: none;
+}
+
+.contact-item a:visited {
+    color: #B29BC7;
+    
+}
+
+.contact-item {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.location img {
+    height: 32px;
+    width: 32px;
+    margin-right: 20px;
+}
+
+.whatsapp a img {
+    height: 32px;
+    width: 32px;
+    margin-right: 20px;
+}
+
+.instagram a img {
+    height: 32px;
+    width: 32px;
+    margin-right: 20px;
+}
+
+.instagram a p {
+    display: none;
+}
+
+
+
+
 
 
 
@@ -592,6 +746,27 @@ body {
     .slider-button {
         top: 58px;
     }
+
+    .discount {
+        width: auto;
+        padding: 40px;
+    }
+
+    .review-container .scrollbar {
+        margin: 50px 0 20px 0;
+    }
+
+    .insta-container .scrollbar {
+        margin: 50px 0 20px 0;
+    }
+
+    .insta-scrollbar {
+        width: auto;
+    }
+
+    .header {
+        padding-top: 20px;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -607,6 +782,10 @@ body {
     .slider-button {
         width: 50px;
         top: 60px;
+    }
+
+    .header {
+        padding-top: 20px;
     }
 }
 
@@ -677,6 +856,7 @@ body {
         width: 82.6vw;
         height: auto !important;
     }
+
     .slider-button {
         display: none;
     }
@@ -785,6 +965,10 @@ body {
         font-size: 14px;
     }
 
+    .header {
+        padding-top: 20px;
+    }
+
 
 }
 
@@ -809,6 +993,36 @@ body {
         position: absolute;
         right: 0;
         top: 0;
+    }
+    .contacts {
+        flex-direction: column;
+    }
+
+    .contact-item {
+        flex-direction: row-reverse;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .contact-item a {
+        flex-direction: row-reverse;
+    }
+
+    .contact-item a img {
+        margin-right: 0;
+        margin-left: 20px;
+    }
+
+    .contact-item img {
+        margin-right: 0;
+        margin-left: 20px;
+    }
+
+    .instagram a p {
+        display: inline;
+    }
+    .header {
+        padding-top: 20px;
     }
 }
 

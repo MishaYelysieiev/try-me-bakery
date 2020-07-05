@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
 
 
-            769: {
+            813: {
                 direction: 'horizontal',
                 slidesPerView: 4,
                 slidesPerGroup: 4,
@@ -97,6 +97,98 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         }
+    });
+
+    var mySwiperReview = new Swiper('.review-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        slidesPerView: 1.25,
+        watchSlidesVisibility: true,
+        spaceBetween: 30,
+        allowTouchMove: true,
+
+        // If we need pagination
+        scrollbar: {
+            el: '.review-scrollbar',
+            draggable: false,
+            dragClass: 'scrollbar-elem'
+        },
+
+        breakpoints: {
+            812: {
+                direction: 'horizontal',
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                watchSlidesVisibility: true,
+                spaceBetween: 30,
+                allowTouchMove: true
+            },
+            1024: {
+                direction: 'horizontal',
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                watchSlidesVisibility: true,
+                spaceBetween: 30,
+                allowTouchMove: true
+            },
+            1366: {
+                direction: 'horizontal',
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+                watchSlidesVisibility: true,
+                spaceBetween: 30,
+                allowTouchMove: true
+            }
+        }
+
+
+
+    });
+
+    var mySwiperInsta = new Swiper('.insta-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        slidesPerView: 1.25,
+        watchSlidesVisibility: true,
+        spaceBetween: 30,
+        allowTouchMove: true,
+
+        // If we need pagination
+        scrollbar: {
+            el: '.insta-scrollbar',
+            draggable: false,
+            dragClass: 'scrollbar-insta-elem'
+        },
+
+        breakpoints: {
+            812: {
+                direction: 'horizontal',
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                watchSlidesVisibility: true,
+                spaceBetween: 30,
+                allowTouchMove: true
+            },
+            1024: {
+                direction: 'horizontal',
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                watchSlidesVisibility: true,
+                spaceBetween: 30,
+                allowTouchMove: true
+            },
+            1366: {
+                direction: 'horizontal',
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+                watchSlidesVisibility: true,
+                spaceBetween: 30,
+                allowTouchMove: true
+            }
+        }
+
+
+
     })
 });
 

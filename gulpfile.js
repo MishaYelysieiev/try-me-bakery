@@ -21,7 +21,8 @@ const fontsFiles = [										//составляем массив перемен
 
 const imgFiles = [
     './src/img/**/**.jpg',
-    './src/img/**/**.png'
+    './src/img/**/**.png',
+    './src/img/**/**.svg'
 ];
 
 function cleandev() {										//модуль отчистки папки перед каждой расспаковкой

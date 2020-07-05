@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
 
 
-            769: {
+            813: {
                 direction: 'horizontal',
                 slidesPerView: 4,
                 slidesPerGroup: 4,

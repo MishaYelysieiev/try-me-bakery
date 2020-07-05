@@ -22,6 +22,12 @@ body {
     font-family: 'ProximaNova-Regular';
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .product-prices {
     background-color: white;
     padding: 0 0 190px 0;
@@ -41,7 +47,7 @@ body {
     font-family: 'MADE';
     font-size: 64px;
     color: #2E0028;
-    margin: 0 33px;
+    margin: 0 23px;
 }
 
 .heading-line {
@@ -129,6 +135,7 @@ body {
     transition: 0.4s;
     font-family: 'ProximaNova-Regular';
     margin-bottom: 30px;
+    line-break: strict;
 }
 
 .btn:hover {
@@ -225,6 +232,7 @@ body {
 .list-dot {
     display: inline-block;
     width: 8px;
+    min-width: 8px;
     height: 8px;
     background: #A28CD1;
     margin-right: 15px;
@@ -252,7 +260,7 @@ body {
     backdrop-filter: blur(4px);
     font-weight: 600;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 150%;
     color: #FFFFFF;
     padding: 30px;
     box-sizing: border-box;
@@ -475,6 +483,51 @@ body {
     max-width: 17vw;
 }
 
+.decorations-cards {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.decoration-variation li {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.decoration-variation li span {
+    color: #A28CD1;
+    margin-right: 14px;
+}
+
+.decorations-cards .card {
+    flex: 0 0 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.decorations-cards .card img {
+    width: 25vw;
+}
+
+.decorations-description {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.decoration-description {
+    flex: 0 0 25vw;
+    display: flex;
+}
+
+
+
+
 @keyframes upperwaving {
     0% {
         transform: rotate(25deg) translate(0, 85%);
@@ -557,7 +610,7 @@ body {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
     .more-info {
         display: block;
         width: 100%;
@@ -705,6 +758,31 @@ body {
     .process .info-step {
         width: 80vw;
         
+    }
+
+    .decorations-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .decorations-cards .card {
+        flex: 0 0 100%;
+        font-size: 18px;
+    }
+
+    .decorations-cards .card img {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .decorations-description {
+        flex-wrap: wrap;
+    }
+    
+    .decoration-description {
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+        font-size: 14px;
     }
 
 

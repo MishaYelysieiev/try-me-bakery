@@ -75,6 +75,7 @@ body {
     color: #958B94;
     margin: 0 25px;
     font-size: 24px;
+    margin-bottom: 5px;
 }
 
 .product-var.active {
@@ -152,12 +153,14 @@ body {
     flex-direction: column;
     align-items: center;
     z-index: 1;
+    width: 100%;
 }
 
 .pricelist-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
 }
 
 .priceitem {
@@ -177,6 +180,11 @@ body {
     margin-bottom: 15px;
 }
 
+.heading-description .title {
+    font-weight: 600;
+    font-size: 22px;
+}
+
 .price-value {
     font-weight: 600;
     font-size: 22px;
@@ -193,6 +201,12 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: #6F5E6C;
+}
+
+.price-description.list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
 }
 
 .size {
@@ -226,7 +240,7 @@ body {
 }
 
 .markup p {
-    max-width: 521.5px;
+    max-width: 550px;
 }
 
 .markup.strong {
@@ -277,6 +291,10 @@ body {
     opacity: 1;
 }
 
+.pricelist-wrapper-center {
+    justify-content: center;
+}
+
 .gallery-slide-description {
     margin-top: 30px;
     font-size: 20px;
@@ -296,6 +314,14 @@ body {
     overflow: hidden;
 }
 
+.background-plant-reviews {
+    position: absolute;
+    transform: translate(-100%, -50%);
+    top: 90px;
+    left: 160px;
+    z-index: -1;
+}
+
 .insta-container {
     width: 100%;
     overflow: hidden;
@@ -307,7 +333,7 @@ body {
 }
 
 .gallery {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .slider-button {
@@ -357,12 +383,21 @@ body {
     background: #E5E5E5;
     width: 170px;
     height: 0.5px;
-    position: initial;
+    position: relative;
+    top: -40px;
+    left: 0;
 }
 
 .insta-scrollbar {
     background: #E5E5E5;
     width: 170px;
+    height: 0.5px;
+    position: initial;
+    margin-top: 50px;
+}
+
+.review-scrollbar {
+    background: #E5E5E5;
     height: 0.5px;
     position: initial;
 }
@@ -561,6 +596,7 @@ body {
 .swiper-slide.insta-slide > img {
     width: 100%;
     height: 100%;
+    height: 325px;
 }
 
 .reviews {
@@ -580,6 +616,8 @@ margin-top: 70px;
 width: 36vw;
 text-align: center;
 line-height: 150%;
+background-color: #FFFFFF;
+position: relative;
 }
 
 .discount h3 {
@@ -590,6 +628,10 @@ text-align: center;
 
 color: #B29BC7;
 margin-bottom: 30px;
+}
+
+.discount p {
+    font-size: 15px;
 }
 
 .insta-btn {
@@ -630,6 +672,7 @@ margin-bottom: 30px;
     display: flex;
     font-size: 16px;
     line-height: 150%;
+    font-weight: normal;
     font-family: "Roboto", sans-serif;
     color: #B29BC7;
 }
@@ -672,8 +715,71 @@ margin-bottom: 30px;
     margin-right: 20px;
 }
 
-.instagram a p {
+.cupcake-overview {
+    margin-bottom: 190px;
+    font-size: 16px;
+    line-height: 150%;
+    width: 100%;
+}
+
+.cupcake-description {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 70px;
+
+}
+
+.cupcake-description-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 100px;
+}
+
+.cupcake-description-block img {
     display: none;
+}
+
+.cupcake-list p {
+    color: #2E0028;
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.cupcake-list li {
+    margin-bottom: 8px;
+}
+
+.cupcake-addition {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.cupcake-addition p {
+    margin-bottom: 20px;
+}
+
+.cupcake-addition p span {
+    font-weight: 600;
+}
+
+.fil .list-dot {
+    background-color: #E3B6C8;
+}
+
+.cupcake-description-img {
+    width: 300px;
+    height: 400px;
+}
+
+.cupcake-examples {
+    display: flex;
+    justify-content: space-around;
 }
 
 
@@ -767,6 +873,10 @@ margin-bottom: 30px;
     .header {
         padding-top: 20px;
     }
+
+    .cupcake-description-img:first-of-type {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -786,6 +896,18 @@ margin-bottom: 30px;
 
     .header {
         padding-top: 20px;
+    }
+
+    .cupcake-description-img {
+        display: none;
+    }
+
+    .cupcake-description-block {
+        justify-content: center;
+    }
+
+    .cupcake-list {
+        margin: 0 100px;
     }
 }
 
@@ -969,6 +1091,40 @@ margin-bottom: 30px;
         padding-top: 20px;
     }
 
+    .background-plant-reviews {
+        top: 210px;
+        left: 270px;
+    }
+
+    .cupcake-description-block {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .cupcake-description-block img {
+        display: flex;
+        margin: 40px auto 0 auto;
+        width: 95%;
+
+    }
+
+    .cupcake-examples {
+        display: none;
+    }
+
+    .cupcake-overview {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .cupcake-list {
+        margin: 10px;
+    }
+
+    .heading-description .title {
+        font-weight: 600;
+        font-size: 20px;
+    }
 
 }
 
@@ -989,7 +1145,7 @@ margin-bottom: 30px;
     .heading-description {
         position: relative;
     }
-    .price-value {
+    .price-value-abs {
         position: absolute;
         right: 0;
         top: 0;

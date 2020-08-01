@@ -17,12 +17,18 @@ function slideProductPosition(product) {
     let slide = document.body.querySelector(`.slides[data-category='${product}']`);
     let distance = slide.offsetLeft;
     document.body.querySelector('#price-slider').style.left = -(distance) + 'px';
+    if(product != "cakes") {
+        document.body.querySelector(`.gallery`).style.display = "none";
+    } else {
+        document.body.querySelector(`.gallery`).style.display = "flex";
+    }
 
 
 }
 
 window.addEventListener('resize', function () {
     slideProductPosition();
+    initializeSlickPostition();
 });
 
 

@@ -28,6 +28,7 @@
     "gulp-imagemin": "^7.1.0"
   },
   "dependencies": {
+    "google-spreadsheet": "^3.0.11",
     "jquery": "^3.5.1",
     "swiper": "^5.4.3"
   }

@@ -30,7 +30,7 @@ body {
 
 .product-prices {
     background-color: white;
-    padding: 0 0 190px 0;
+    padding: 0 0 130px 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -145,7 +145,7 @@ body {
 }
 
 .order-cake {
-    margin-bottom: 190px;
+    margin-bottom: 130px;
 }
 
 .pricelist {
@@ -457,7 +457,7 @@ body {
 }
 
 .process {
-    padding: 190px 0;
+    padding: 130px 0;
     text-align: center;
     color: #958B94;
     position: relative;
@@ -600,11 +600,11 @@ body {
 }
 
 .reviews {
-    margin-top: 190px;
+    margin-top: 130px;
 }
 
 .insta {
-    margin-top: 190px;
+    margin-top: 130px;
 }
 
 .discount {
@@ -716,7 +716,7 @@ margin-bottom: 30px;
 }
 
 .cupcake-overview {
-    margin-bottom: 190px;
+    margin-bottom: 130px;
     font-size: 16px;
     line-height: 150%;
     width: 100%;
@@ -735,6 +735,10 @@ margin-bottom: 30px;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 100px;
+}
+
+.cupcake-description-block.moved {
+    margin: 0 70px;
 }
 
 .cupcake-description-block img {
@@ -781,6 +785,69 @@ margin-bottom: 30px;
     display: flex;
     justify-content: space-around;
 }
+
+.side-info {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 45%;
+    justify-content: center;
+}
+
+.side-info p {
+    margin-bottom: 10px;
+}
+
+.side-info p span {
+    font-weight: 600;
+}
+
+.introduction h1 {
+    font-family: "MADE";
+    font-size: 72px;
+    margin-bottom: 30px;
+    height: 72px;
+}
+
+.introduction {
+    font-size: 16px;
+line-height: 150%;      
+text-align: left;
+width: 100%;
+    padding-top: 64px;
+    box-sizing: border-box;
+}
+
+.introduction p{
+    margin-bottom: 25px;    
+    max-width: 425px;
+}
+
+.introduction p span{
+    font-weight: 600;
+}
+
+.text-me {
+    margin-top: 45px;
+}
+
+.main-banner {
+    /* background-attachment: fixed; */
+    background-image: url('../img/banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner-img {
+    background-image: url('../img/main.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 272px;
+    display: none;
+}
+
+
 
 
 
@@ -1100,6 +1167,10 @@ margin-bottom: 30px;
         margin: 0;
         width: 100%;
     }
+
+    .cupcake-description-block.moved {
+        margin: 0;
+    }
     
     .cupcake-description-block img {
         display: flex;
@@ -1180,6 +1251,45 @@ margin-bottom: 30px;
     .header {
         padding-top: 20px;
     }
+
+        .side-info {
+        flex: 1 0 100%;
+    }
+
+    .banner-img {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .main-banner {
+        background-image: none;
+    }
+
+    .introduction h1 {
+        font-size: 54px;
+        text-align: center;
+    }
+
+    .banner-expl {
+        display: none;
+    }
+
+    .text-me {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+
+    .main-banner {
+        padding-left:0 ;
+        padding-right: 0;
+    }
+
+    .introduction p {
+        margin-left: 7vw ;
+        margin-right: 7vw;
+    }
+
 }
 
 @media screen and (max-width: 480px) {

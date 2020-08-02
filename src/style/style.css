@@ -22,6 +22,27 @@ body {
     font-family: 'ProximaNova-Regular';
 }
 
+.web-wrapper {
+    position: relative;
+}
+
+.arrow-up {
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/arrow.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    border: none;
+    outline-style: none;
+    bottom: 50px;
+    right: 35px;
+    transition: 0.4s;
+    opacity: 0;
+    z-index: 999;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -494,7 +515,7 @@ body {
     margin: 0 auto 90px auto;
 }
 
-.process > p {
+.process>p {
     font-size: 16px;
     line-height: 150%;
     width: 39vw;
@@ -512,11 +533,10 @@ body {
 }
 
 .process .steps .step {
-    flex:  0 0 25%;
+    flex: 0 0 25%;
     position: relative;
     padding-right: 30px;
     box-sizing: border-box;
-
 }
 
 .process .steps .step:not(.last)::after {
@@ -528,10 +548,9 @@ body {
     content: '';
     right: calc(-3.5vw + 30px);
     top: 50px;
-
 }
 
-.process .steps .step .odd  {
+.process .steps .step .odd {
     margin-top: 14px;
 }
 
@@ -539,7 +558,6 @@ body {
     display: flex;
     margin-top: 50px;
     text-align: left;
-    
 }
 
 .process .steps .step .step-description p {
@@ -588,12 +606,12 @@ body {
     display: flex;
 }
 
-.swiper-slide.review-slide > img {
+.swiper-slide.review-slide>img {
     width: 100%;
     height: 100%;
 }
 
-.swiper-slide.insta-slide > img {
+.swiper-slide.insta-slide>img {
     width: 100%;
     height: 100%;
     height: 325px;
@@ -610,24 +628,23 @@ body {
 .discount {
     padding: 40px 80px;
     border: 3px solid #E3CAE3;
-box-sizing: border-box;
-box-shadow: 0px 2px 20px rgba(178, 150, 173, 0.25);
-margin-top: 70px;
-width: 36vw;
-text-align: center;
-line-height: 150%;
-background-color: #FFFFFF;
-position: relative;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 20px rgba(178, 150, 173, 0.25);
+    margin-top: 70px;
+    width: 36vw;
+    text-align: center;
+    line-height: 150%;
+    background-color: #FFFFFF;
+    position: relative;
 }
 
 .discount h3 {
     font-weight: 600;
-font-size: 24px;
-line-height: 29px;
-text-align: center;
-
-color: #B29BC7;
-margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #B29BC7;
+    margin-bottom: 30px;
 }
 
 .discount p {
@@ -636,7 +653,6 @@ margin-bottom: 30px;
 
 .insta-btn {
     margin-top: 30px;
-    
 }
 
 .btn a {
@@ -647,7 +663,6 @@ margin-bottom: 30px;
 
 .btn a:visited {
     color: inherit;
-
 }
 
 .header {
@@ -657,6 +672,18 @@ margin-bottom: 30px;
     justify-content: space-between;
     flex-wrap: nowrap;
     flex-direction: row;
+}
+
+.footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    border-top: 1px solid #D7D7F1;
+box-sizing: border-box;
+min-height: 150px;
 }
 
 .logo {
@@ -677,17 +704,39 @@ margin-bottom: 30px;
     color: #B29BC7;
 }
 
+.footer .contacts {
+    flex-direction: column;
+}
+
+.footer .contacts a img {
+    height: 23px;
+    width: 23px;
+}
+
+.footer .contacts a {
+    font-size: 14px;
+}
+
+.footer .contacts .contact-item.instagram {
+    margin: 10px 0;
+}
+
+.footer .contacts img {
+    height: 23px;
+    width: 23px;
+}
+
 .contact-item a {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     color: #B29BC7;
     outline-style: none;
+    white-space: nowrap;
 }
 
 .contact-item a:visited {
     color: #B29BC7;
-    
 }
 
 .contact-item {
@@ -727,7 +776,6 @@ margin-bottom: 30px;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 70px;
-
 }
 
 .cupcake-description-block {
@@ -810,19 +858,19 @@ margin-bottom: 30px;
 
 .introduction {
     font-size: 16px;
-line-height: 150%;      
-text-align: left;
-width: 100%;
+    line-height: 150%;
+    text-align: left;
+    width: 100%;
     padding-top: 64px;
     box-sizing: border-box;
 }
 
-.introduction p{
-    margin-bottom: 25px;    
+.introduction p {
+    margin-bottom: 25px;
     max-width: 425px;
 }
 
-.introduction p span{
+.introduction p span {
     font-weight: 600;
 }
 
@@ -847,13 +895,14 @@ width: 100%;
     display: none;
 }
 
+.anchors {
+    display: flex;
+}
 
-
-
-
-
-
-
+.anchor-item {
+    margin: 15px;
+    cursor: pointer;
+}
 
 @keyframes upperwaving {
     0% {
@@ -919,28 +968,25 @@ width: 100%;
     .slider-button {
         top: 58px;
     }
-
     .discount {
         width: auto;
         padding: 40px;
     }
-
     .review-container .scrollbar {
         margin: 50px 0 20px 0;
     }
-
     .insta-container .scrollbar {
         margin: 50px 0 20px 0;
     }
-
     .insta-scrollbar {
         width: auto;
     }
-
     .header {
         padding-top: 20px;
     }
-
+    .footer {
+        padding-top: 20px;
+    }
     .cupcake-description-img:first-of-type {
         display: none;
     }
@@ -960,19 +1006,18 @@ width: 100%;
         width: 50px;
         top: 60px;
     }
-
     .header {
         padding-top: 20px;
     }
-
+    .footer {
+        padding-top: 20px;
+    }
     .cupcake-description-img {
         display: none;
     }
-
     .cupcake-description-block {
         justify-content: center;
     }
-
     .cupcake-list {
         margin: 0 100px;
     }
@@ -1045,7 +1090,6 @@ width: 100%;
         width: 82.6vw;
         height: auto !important;
     }
-
     .slider-button {
         display: none;
     }
@@ -1076,33 +1120,27 @@ width: 100%;
         transform: rotate(0deg) translate(0, 1130%);
         animation-name: none;
     }
-
     .process h3 {
         width: auto;
         padding: 0 47px;
         font-size: 20px;
         margin: 0 0 20px 0;
     }
-
     .process .steps {
         flex-direction: column;
     }
-
     .process .steps .step {
         flex: 0 0 100%;
         width: 100%;
         padding: 60px 0;
     }
-
     .process .steps .step .step-description {
         max-width: 95%;
         font-size: 14px;
     }
-
     .process .steps .step .step-description p {
         max-width: 92%;
     }
-
     .process .steps .step:not(.last)::after {
         width: 80vw;
         content: '';
@@ -1110,93 +1148,118 @@ width: 100%;
         left: 0;
         margin: 0 auto;
         top: 100%;
-    
     }
-
     .background-plant-step.right {
         display: none;
     }
-
     .background-plant-step.left {
         width: 90px;
         height: 200px;
         transform: rotateZ(-80deg);
         left: -55px;
     }
-
     .process .info-step {
         width: 80vw;
-        
     }
-
     .decorations-cards {
         flex-wrap: wrap;
         justify-content: center;
     }
-
     .decorations-cards .card {
         flex: 0 0 100%;
         font-size: 18px;
     }
-
     .decorations-cards .card img {
         width: 100%;
         margin-bottom: 60px;
     }
-
     .decorations-description {
         flex-wrap: wrap;
     }
-    
     .decoration-description {
         flex: 0 0 100%;
         margin-bottom: 30px;
         font-size: 14px;
     }
-
     .header {
         padding-top: 20px;
     }
-
+    .footer {
+        padding-top: 20px;
+    }
     .background-plant-reviews {
         top: 210px;
         left: 270px;
     }
-
     .cupcake-description-block {
         margin: 0;
         width: 100%;
     }
-
     .cupcake-description-block.moved {
         margin: 0;
     }
-    
     .cupcake-description-block img {
         display: flex;
         margin: 40px auto 0 auto;
         width: 95%;
-
     }
-
     .cupcake-examples {
         display: none;
     }
-
     .cupcake-overview {
         margin-bottom: 20px;
         font-size: 14px;
     }
-
     .cupcake-list {
         margin: 10px;
     }
-
     .heading-description .title {
         font-weight: 600;
         font-size: 20px;
     }
+    .anchors {
+        flex-direction: column;
+        font-size: 12px;
+    }
 
+    .footer .contacts a img {
+        height: 20px;
+        width: 20px;
+        margin-right: 10px;
+        margin-left: 0;
+    }
+    
+    .footer .contacts a {
+        font-size: 12px;
+    }
+
+    .footer .contacts {
+        font-size: 12px;
+    }
+    
+    .footer .contacts .contact-item.instagram {
+        margin: 8px 0;
+    }
+
+    .footer .contacts .contact-item {
+        flex-direction: initial;
+        margin: 0;
+    }
+    
+    .footer .contacts .contact-item a {
+        flex-direction: initial;
+    }
+    
+    .footer .contacts img {
+        height: 20px;
+        width: 20px;
+        margin-right: 10px;
+        margin-left: 0;
+    }
+
+    .footer .contacts .contact-item.instagram {
+        margin: 15px 0;
+    }
 }
 
 @media screen and (max-width: 578px) {
@@ -1224,72 +1287,61 @@ width: 100%;
     .contacts {
         flex-direction: column;
     }
-
     .contact-item {
         flex-direction: row-reverse;
         margin-right: 0;
         margin-bottom: 15px;
     }
-
     .contact-item a {
         flex-direction: row-reverse;
     }
-
     .contact-item a img {
         margin-right: 0;
         margin-left: 20px;
     }
-
     .contact-item img {
         margin-right: 0;
         margin-left: 20px;
     }
-
     .instagram a p {
         display: inline;
     }
     .header {
         padding-top: 20px;
     }
-
-        .side-info {
+    .footer {
+        padding-top: 20px;
+    }
+    .side-info {
         flex: 1 0 100%;
     }
-
     .banner-img {
         display: block;
         margin-bottom: 30px;
     }
-
     .main-banner {
         background-image: none;
     }
-
     .introduction h1 {
         font-size: 54px;
         text-align: center;
     }
-
     .banner-expl {
         display: none;
     }
-
     .text-me {
         margin-left: auto;
         margin-right: auto;
         display: flex;
     }
-
     .main-banner {
-        padding-left:0 ;
+        padding-left: 0;
         padding-right: 0;
     }
-
     .introduction p {
-        margin-left: 7vw ;
+        margin-left: 7vw;
         margin-right: 7vw;
     }
-
 }
 
 @media screen and (max-width: 480px) {

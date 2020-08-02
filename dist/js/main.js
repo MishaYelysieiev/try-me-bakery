@@ -23,6 +23,8 @@ function slideProductPosition(product) {
         document.body.querySelector(`.gallery`).style.display = "flex";
     }
 
+    slide.querySelector('.pricelist').classList.add('visible');
+
 
 }
 
@@ -204,6 +206,8 @@ document.addEventListener('click', function (event) {
     let target = event.target;
     if (target.classList.contains('product-var')) {
         const currentActiveProduct = document.body.querySelector('.product-var.active');
+        let slide = document.body.querySelector(`.slides[data-category='${currentActiveProduct.dataset.category}']`);
+        slide.querySelector('.pricelist').classList.remove('visible');
         currentActiveProduct.classList.remove('active');
         target.classList.add('active');
         initializeSlickPostition();
@@ -221,6 +225,15 @@ document.addEventListener('click', function (event) {
         btnDisable.style.display = 'none';
         btn.style.display = 'block';
         hover.style.opacity = '0';
+    } else if (target.classList.contains('anchor-item')) {
+        let item = target.dataset.anchor;
+        let block = document.body.querySelector(`.container[data-anchor='${item}']`);
+        if(!block) {
+            block = document.body.querySelector(`.pricelist.visible[data-anchor='${item}']`);
+        }
+
+        block.scrollIntoView({behavior: "smooth"})
+    
     }
 });
 

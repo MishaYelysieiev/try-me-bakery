@@ -23,6 +23,8 @@ function slideProductPosition(product) {
         document.body.querySelector(`.gallery`).style.display = "flex";
     }
 
+    slide.querySelector('.pricelist').classList.add('visible');
+
 
 }
 
@@ -204,6 +206,8 @@ document.addEventListener('click', function (event) {
     let target = event.target;
     if (target.classList.contains('product-var')) {
         const currentActiveProduct = document.body.querySelector('.product-var.active');
+        let slide = document.body.querySelector(`.slides[data-category='${currentActiveProduct.dataset.category}']`);
+        slide.querySelector('.pricelist').classList.remove('visible');
         currentActiveProduct.classList.remove('active');
         target.classList.add('active');
         initializeSlickPostition();
@@ -221,10 +225,23 @@ document.addEventListener('click', function (event) {
         btnDisable.style.display = 'none';
         btn.style.display = 'block';
         hover.style.opacity = '0';
+    } else if (target.classList.contains('anchor-item')) {
+        let item = target.dataset.anchor;
+        let block = document.body.querySelector(`.container[data-anchor='${item}']`);
+        if(!block) {
+            block = document.body.querySelector(`.pricelist.visible[data-anchor='${item}']`);
+        }
+
+        block.scrollIntoView({behavior: "smooth"})
+    
+    } else if (target.classList.contains('arrow-up')) {
+        console.log('aasda');
+        document.querySelector('.header').scrollIntoView({behavior: "smooth"});
     }
 });
 
-document.addEventListener('scroll', function(){
+document.addEventListener('scroll', function(e){
+    let arrow = document.querySelector('.arrow-up');
     if(document.getElementById('scroll-breakpoint-price').getBoundingClientRect().y <= 100) {
         document.querySelectorAll('.background-plant-price').forEach(function(el){
             el.style.animationPlayState = 'running';
@@ -232,7 +249,15 @@ document.addEventListener('scroll', function(){
     } else if(document.getElementById('scroll-breakpoint-step').getBoundingClientRect().y <= 50) {
         document.querySelectorAll('.background-plant-step').forEach(function(el){
             el.style.animationPlayState = 'running';
-        })
+        });
+
+    } 
+    
+    if(window.scrollY > 1000) {
+        arrow.style.opacity = '1';
+    } else {
+        arrow.style.opacity = '0';
     }
+
 })
 

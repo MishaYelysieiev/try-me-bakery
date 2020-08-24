@@ -234,10 +234,14 @@ document.addEventListener('click', function (event) {
 
         block.scrollIntoView({behavior: "smooth"})
     
+    } else if (target.classList.contains('arrow-up')) {
+        console.log('aasda');
+        document.querySelector('.header').scrollIntoView({behavior: "smooth"});
     }
 });
 
-document.addEventListener('scroll', function(){
+document.addEventListener('scroll', function(e){
+    let arrow = document.querySelector('.arrow-up');
     if(document.getElementById('scroll-breakpoint-price').getBoundingClientRect().y <= 100) {
         document.querySelectorAll('.background-plant-price').forEach(function(el){
             el.style.animationPlayState = 'running';
@@ -245,7 +249,15 @@ document.addEventListener('scroll', function(){
     } else if(document.getElementById('scroll-breakpoint-step').getBoundingClientRect().y <= 50) {
         document.querySelectorAll('.background-plant-step').forEach(function(el){
             el.style.animationPlayState = 'running';
-        })
+        });
+
+    } 
+    
+    if(window.scrollY > 1000) {
+        arrow.style.opacity = '1';
+    } else {
+        arrow.style.opacity = '0';
     }
+
 })
 

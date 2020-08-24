@@ -611,10 +611,14 @@ body {
     height: 100%;
 }
 
+.swiper-slide.insta-slide {
+    max-height: 340px;
+    overflow: hidden;
+}
+
 .swiper-slide.insta-slide>img {
     width: 100%;
     height: 100%;
-    height: 325px;
 }
 
 .reviews {
@@ -789,6 +793,10 @@ min-height: 150px;
     margin: 0 70px;
 }
 
+.cupcake-description-block.centered {
+    justify-content: center;
+}
+
 .cupcake-description-block img {
     display: none;
 }
@@ -902,6 +910,11 @@ min-height: 150px;
 .anchor-item {
     margin: 15px;
     cursor: pointer;
+}
+
+.description {
+    font-size: 1vw;
+    line-height: 135%;
 }
 
 @keyframes upperwaving {

@@ -1273,6 +1273,11 @@ min-height: 150px;
     .footer .contacts .contact-item.instagram {
         margin: 15px 0;
     }
+
+    .description {
+        font-size: initial;
+        line-height: 150%;
+    }
 }
 
 @media screen and (max-width: 578px) {

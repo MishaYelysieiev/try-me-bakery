@@ -12,6 +12,25 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '785124018586991');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=785124018586991&ev=PageView
+        &noscript=1" />
+    </noscript>
 </head>
 
 <body>
@@ -22,7 +41,8 @@
             <div class="contacts">
 
                 <div class="whatsapp contact-item">
-                    <a href="https://api.whatsapp.com/send?phone=79998027243&text=Привет!%20Хочу%20заказать%20сладости!">
+                    <a
+                        href="https://api.whatsapp.com/send?phone=79998027243&text=Привет!%20Хочу%20заказать%20сладости!">
                         <img src="./img/contacts/whatsapp 1.svg" alt="whatsapp">
                         <p class="contact-info">+7 999 802 72 43</p>
                     </a>
@@ -59,7 +79,8 @@
                     «Алиса в стране чудес». Попробуй меня – пишу
                     я вам от имени своих тортов!
                 </p>
-                <button class="btn text-me"><a href="https://api.whatsapp.com/send?phone=79998027243&text=Привет!%20Хочу%20заказать%20сладости!">Написать
+                <button class="btn text-me"><a
+                        href="https://api.whatsapp.com/send?phone=79998027243&text=Привет!%20Хочу%20заказать%20сладости!">Написать
                         мне</a></button>
             </div>
         </div>
@@ -69,7 +90,7 @@
             <h3 id="scroll-breakpoint-step">Как кондитер, позабочусь о сладком завершении вашего праздника от и до:</h3>
             <div class="steps">
                 <div class="step">
-                    <img src="./img/steps/1.png" alt="first-step">
+                    <img src="./img/steps/1.svg" alt="first-step">
                     <div class="step-description">
                         <span class="list-dot"></span>
                         <p>Помогу подобрать подходящую начинку</p>
@@ -77,7 +98,7 @@
 
                 </div>
                 <div class="step">
-                    <img src="./img/steps/2.png" alt="second-step">
+                    <img src="./img/steps/2.svg" alt="second-step">
                     <div class="step-description">
                         <span class="list-dot"></span>
                         <p>Мысленно соберём с вами торт и придумаем для него дизайн (для особо необычных дизайнов
@@ -86,7 +107,7 @@
                     </div>
                 </div>
                 <div class="step">
-                    <img class="odd" src="./img/steps/3.png" alt="third-step">
+                    <img class="odd" src="./img/steps/3.svg" alt="third-step">
                     <div class="step-description">
                         <span class="list-dot"></span>
                         <p>Создам торт по вашим задумкам и идеям. По готовности отправлю вам фото для полной уверенности
@@ -95,7 +116,7 @@
                     </div>
                 </div>
                 <div class="step last">
-                    <img class="odd" src="./img/steps/4.png" alt="fourth-step">
+                    <img class="odd" src="./img/steps/4.svg" alt="fourth-step">
                     <div class="step-description">
                         <span class="list-dot"></span>
                         <p>Красиво упакую и доставлю на торжество</p>
@@ -115,7 +136,7 @@
                 <li class="product-var active" data-category="cakes">Торты</li>
                 <li class="product-var" data-category="cupcakes">Капкейки</li>
                 <li class="product-var" data-category="zephyr">Зефир</li>
-                <li class="product-var" data-category="lollypops">Безе и леденцы</li>
+                <li class="product-var" data-category="lollipops">Безе и леденцы</li>
                 <div class="slick"></div>
             </ul>
             <div class="slider-wrapper">
@@ -146,7 +167,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="card-container">
-                                        <img class="img" src="./img/cakes/fillings/2.jpg" alt="Jane Air">
+                                        <img class="img" src="./img/cakes/fillings/2.jpg" alt="The Cherry Orchard">
                                         <div class="hover">
                                             <p class="description">
                                                 Название торта говорит само за себя. Пряная вишня и крем-чиз с крошкой
@@ -167,7 +188,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="card-container">
-                                        <img class="img" src="./img/cakes/fillings/3.jpg" alt="Jane Air">
+                                        <img class="img" src="./img/cakes/fillings/3.jpg" alt="Thumbelina">
                                         <div class="hover">
                                             <p class="description">
                                                 Невесомый и молочный многослойный торт на основе сгущённого молока -
@@ -187,7 +208,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="card-container">
-                                        <img class="img" src="./img/cakes/fillings/4.jpg" alt="Jane Air">
+                                        <img class="img" src="./img/cakes/fillings/4.jpg" alt="Funtik">
                                         <div class="hover">
                                             <p class="description">
                                                 Много карамели разных текстур, небольшая фруктовая нотка и идеальный, не
@@ -206,7 +227,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="card-container">
-                                        <img class="img" src="./img/cakes/fillings/5.jpg" alt="Jane Air">
+                                        <img class="img" src="./img/cakes/fillings/5.jpg" alt="Robinson Crusoe">
                                         <div class="hover">
                                             <p class="description">
                                                 Почувствуй себя на необитаемом острове, попробовав кусочек этого
@@ -228,7 +249,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="card-container">
-                                        <img class="img" src="./img/cakes/fillings/6.jpg" alt="Jane Air">
+                                        <img class="img" src="./img/cakes/fillings/6.jpg" alt="Alice in Wonderland">
                                         <div class="hover">
                                             <p class="description">
                                                 В этом торте есть что-то сказочное, даже волшебное. Сочетание
@@ -250,7 +271,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="card-container">
-                                        <img class="img" src="./img/cakes/fillings/7.jpg" alt="Jane Air">
+                                        <img class="img" src="./img/cakes/fillings/7.jpg" alt="Nutcracker">
                                         <div class="hover">
                                             <p class="description">
                                                 Шоколад, карамель, орешки… Есть ли что-либо, также хорошо дополняющее
@@ -269,7 +290,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="card-container">
-                                        <img class="img" src="./img/cakes/fillings/8.jpg" alt="Jane Air">
+                                        <img class="img" src="./img/cakes/fillings/8.jpg" alt="Dandelion Wine">
                                         <div class="hover">
                                             <p class="description">
                                                 Этот торт - теплый и легкий, но при этом насыщенный и впечатляющий, как
@@ -293,7 +314,8 @@
                         </div>
 
                         <button class="btn order order-cake"><a
-                                href="https://api.whatsapp.com/send?phone=79998027243&text=Привет!%20Хочу%20заказать%20сладости!">Заказать тортик</a></button>
+                                href="https://api.whatsapp.com/send?phone=79998027243&text=Привет!%20Хочу%20заказать%20сладости!">Заказать
+                                тортик</a></button>
                         <div class="pricelist visible" data-anchor="prices">
                             <img class="background-plant-price upper" src="./img/background/plant 1.png"
                                 alt="background">
@@ -420,7 +442,7 @@
                                         <p class="title">Мини</p>
                                     </div>
                                     <p class="price-description list">6 шт. капейков в коробочке<span
-                                            class="price-value">3400 <span>&#8381</span></span></p>
+                                            class="price-value">1150 <span>&#8381</span></span></p>
                                     <p class="price-description list">9 шт. капейков в коробочке<span
                                             class="price-value">1700 <span>&#8381</span></span></p>
                                     <p class="price-description list">12 шт. капейков в коробочке<span
@@ -500,8 +522,8 @@
                             <div class="pricelist-footer">
                                 <ul class="pricelist-markup">
                                     <li class="markup"><span class="list-dot"></span>
-                                        <p>Если вам нужны сладости в другом количестве или с определенным 
-                                            декором – напишите мне и я с радостью рассчитаю стоимость 
+                                        <p>Если вам нужны сладости в другом количестве или с определенным
+                                            декором – напишите мне и я с радостью рассчитаю стоимость
                                             вашего заказа!</p>
                                     </li>
 
@@ -512,10 +534,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="slides price-var four main-padding" data-category="lollypops">
+                    <div class="slides price-var four main-padding" data-category="lollipops">
                         <div class="cupcake-overview">
                             <div class="cupcake-description">
-                                <img src="./img/lollypops/1.png" alt="cupcake1" class="cupcake-description-img">
+                                <img src="./img/lollipops/1.png" alt="cupcake1" class="cupcake-description-img">
                                 <div class="cupcake-description-block moved">
                                     <ul class="cupcake-list bis">
                                         <p>Ассортимент</p>
@@ -529,18 +551,18 @@
                                         <p>Так же сладости есть уже в готовых коробочках учитывая ваши пожеления
                                             по оформлению.</p>
                                     </div>
-                                    <img src="./img/lollypops/3.png" alt="cupcake3">
+                                    <img src="./img/lollipops/3.png" alt="cupcake3">
                                     <div class="cupcake-addition">
                                         <button class="btn order order-cupcakes"><a
                                                 href="https://api.whatsapp.com/send?phone=79998027243&text=Привет!%20Хочу%20заказать%20сладости!">Заказать
                                                 сладости</a></button>
                                     </div>
                                 </div>
-                                <img src="./img/lollypops/2.png" alt="cupcake2" class="cupcake-description-img">
+                                <img src="./img/lollipops/2.png" alt="cupcake2" class="cupcake-description-img">
                             </div>
                             <div class="cupcake-examples">
-                                <img src="./img/lollypops/3.png" alt="cupcake3">
-                                <img src="./img/lollypops/4.png" alt="cupcake4">
+                                <img src="./img/lollipops/3.png" alt="cupcake3">
+                                <img src="./img/lollipops/4.png" alt="cupcake4">
                             </div>
                         </div>
                         <div class="pricelist" data-anchor="prices">
@@ -573,8 +595,8 @@
                             <div class="pricelist-footer">
                                 <ul class="pricelist-markup">
                                     <li class="markup"><span class="list-dot"></span>
-                                        <p>Если вам нужны сладости в другом количестве или с определенным 
-                                            декором – напишите мне и я с радостью рассчитаю стоимость 
+                                        <p>Если вам нужны сладости в другом количестве или с определенным
+                                            декором – напишите мне и я с радостью рассчитаю стоимость
                                             вашего заказа!</p>
                                     </li>
 
@@ -696,7 +718,8 @@
             <div class="contacts">
 
                 <div class="whatsapp contact-item">
-                    <a href="https://api.whatsapp.com/send?phone=79998027243&text=Привет!%20Хочу%20заказать%20сладости!">
+                    <a
+                        href="https://api.whatsapp.com/send?phone=79998027243&text=Привет!%20Хочу%20заказать%20сладости!">
                         <img src="./img/contacts/whatsapp 1.svg" alt="whatsapp">
                         <p class="contact-info">+7 999 802 72 43</p>
                     </a>

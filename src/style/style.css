@@ -693,7 +693,7 @@ min-height: 150px;
 .logo {
     width: 85px;
     height: 85px;
-    background-image: url('../img/Logo.png');
+    background-image: url('../img/Logo.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

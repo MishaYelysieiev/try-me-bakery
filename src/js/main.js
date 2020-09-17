@@ -25,6 +25,10 @@ function slideProductPosition(product) {
 
     slide.querySelector('.pricelist').classList.add('visible');
 
+    fbq('track', 'ViewContent', {
+        content_name: 'Slider Interaction',
+        content_category: product
+       });
 
 }
 
@@ -218,6 +222,11 @@ document.addEventListener('click', function (event) {
         let hover = target.previousElementSibling;
         btn.style.display = 'block';
         hover.style.opacity = '1';
+        fbq('track', 'ViewContent', {
+            content_name: 'Interaction with More Info Button',
+            content_category: target.parentElement.querySelector('img').alt
+           });
+           console.log('ViewContent',target.parentElement.querySelector('img').alt);
     } else if (target.classList.contains('cross')) {
         let hover = target.parentElement;
         let btn = hover.nextElementSibling;
@@ -235,8 +244,14 @@ document.addEventListener('click', function (event) {
         block.scrollIntoView({behavior: "smooth"})
     
     } else if (target.classList.contains('arrow-up')) {
-        console.log('aasda');
         document.querySelector('.header').scrollIntoView({behavior: "smooth"});
+    }
+    
+    if (target.classList.contains('order') || target.classList.contains('quick-buy') ) {
+        fbq('track', 'Contact');
+        window.location.href = target.querySelector('a').href;
+    } else if(target.parentElement.classList.contains('order') || target.parentElement.classList.contains('quick-buy')) {
+        fbq('track', 'Contact');
     }
 });
 
